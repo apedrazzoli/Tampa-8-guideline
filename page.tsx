@@ -69,7 +69,7 @@ export default function HomePage() {
           <h2 className="text-5xl font-bold text-center text-gray-900 mb-20">Explore Tampa Bay</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden border-0 bg-white">
-              <Link href="/tampa">
+              <Link href="/restaurants#tampa">
                 <div className="relative">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
