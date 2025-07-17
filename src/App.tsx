@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Activities from "./pages/Activities";
 import Beaches from "./pages/Beaches";
+import Nightlife from "./pages/Nightlife";
+import Restaurants from "./pages/Restaurants";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/beaches" element={<Beaches />} />
+              <Route path="/nightlife" element={<Nightlife />} />
+              <Route path="/restaurants" element={<Restaurants />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
