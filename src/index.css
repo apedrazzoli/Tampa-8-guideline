@@ -3,44 +3,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tampa Bay Fun and The City Color Palette */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Modern Tampa Bay Color Palette */
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 20% 15%;
+    --foreground: 210 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 210 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover-foreground: 210 40% 12%;
 
-    --primary: 186 85% 88%;
-    --primary-foreground: 210 20% 15%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 186 85% 95%;
-    --secondary-foreground: 210 20% 15%;
+    --secondary: 199 30% 96%;
+    --secondary-foreground: 210 40% 15%;
 
-    --muted: 186 85% 95%;
-    --muted-foreground: 210 20% 40%;
+    --muted: 199 20% 95%;
+    --muted-foreground: 210 20% 45%;
 
-    --accent: 186 85% 88%;
-    --accent-foreground: 210 20% 15%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 186 30% 85%;
-    --input: 186 30% 85%;
-    --ring: 186 85% 88%;
+    --border: 199 20% 85%;
+    --input: 199 20% 90%;
+    --ring: 199 89% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Custom Tampa Bay colors */
-    --tampa-blue: 186 85% 88%;
-    --tampa-blue-light: 186 85% 95%;
-    --tampa-dark: 210 20% 15%;
-    --tampa-gray: 210 20% 40%;
+    /* Custom modern Tampa Bay colors */
+    --ocean-blue: 199 89% 48%;
+    --ocean-blue-light: 199 60% 88%;
+    --ocean-blue-dark: 199 89% 35%;
+    --sand-beige: 35 25% 92%;
+    --sunset-orange: 25 95% 58%;
+    --coral-pink: 340 75% 75%;
+    --palm-green: 145 63% 42%;
+    --night-navy: 210 50% 15%;
+    --cloud-white: 0 0% 98%;
+    --warm-gray: 210 15% 55%;
   }
 }
 
@@ -49,29 +58,150 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
   }
 }
 
 @layer utilities {
-  .text-tampa-blue {
-    color: hsl(var(--tampa-blue));
+  /* Modern color utilities */
+  .text-ocean-blue {
+    color: hsl(var(--ocean-blue));
   }
   
-  .bg-tampa-blue {
-    background-color: hsl(var(--tampa-blue));
+  .bg-ocean-blue {
+    background-color: hsl(var(--ocean-blue));
   }
   
-  .bg-tampa-blue-light {
-    background-color: hsl(var(--tampa-blue-light));
+  .bg-ocean-blue-light {
+    background-color: hsl(var(--ocean-blue-light));
   }
   
-  .text-tampa-dark {
-    color: hsl(var(--tampa-dark));
+  .bg-ocean-blue-dark {
+    background-color: hsl(var(--ocean-blue-dark));
   }
   
-  .text-tampa-gray {
-    color: hsl(var(--tampa-gray));
+  .bg-sand-beige {
+    background-color: hsl(var(--sand-beige));
+  }
+  
+  .bg-sunset-orange {
+    background-color: hsl(var(--sunset-orange));
+  }
+  
+  .bg-coral-pink {
+    background-color: hsl(var(--coral-pink));
+  }
+  
+  .bg-palm-green {
+    background-color: hsl(var(--palm-green));
+  }
+  
+  .text-night-navy {
+    color: hsl(var(--night-navy));
+  }
+  
+  .text-warm-gray {
+    color: hsl(var(--warm-gray));
+  }
+
+  .text-cloud-white {
+    color: hsl(var(--cloud-white));
+  }
+
+  /* Modern gradient backgrounds */
+  .bg-gradient-ocean {
+    background: linear-gradient(135deg, hsl(var(--ocean-blue)) 0%, hsl(var(--ocean-blue-dark)) 100%);
+  }
+
+  .bg-gradient-sunset {
+    background: linear-gradient(135deg, hsl(var(--sunset-orange)) 0%, hsl(var(--coral-pink)) 100%);
+  }
+
+  .bg-gradient-beach {
+    background: linear-gradient(135deg, hsl(var(--ocean-blue-light)) 0%, hsl(var(--sand-beige)) 100%);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  /* Smooth animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Text effects */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--ocean-blue)) 0%, hsl(var(--ocean-blue-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
