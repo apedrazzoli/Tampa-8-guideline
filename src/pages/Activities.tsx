@@ -73,10 +73,14 @@ const Activities = () => {
   const ActivityCard = ({ activity }: { activity: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        <div className="aspect-[4/3] bg-tampa-blue/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-          <p className="text-tampa-gray text-center text-sm p-2">
-            {activity.imagePlaceholder}
-          </p>
+        {/* Image placeholder - ready for actual image */}
+        <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+            <p className="text-cloud-white text-center font-medium text-sm">
+              📷 {activity.imagePlaceholder}
+            </p>
+          </div>
         </div>
         
         <div className="flex items-center justify-between mb-2">
@@ -112,11 +116,14 @@ const Activities = () => {
   const CategoryCard = ({ category }: { category: any }) => (
     <Card className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
       <CardContent className="p-0">
-        <div className={`aspect-[3/2] ${category.color} flex items-center justify-center relative`}>
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-          <p className="text-white text-center text-sm p-4 relative z-10">
-            {category.imagePlaceholder}
-          </p>
+        {/* Image placeholder - ready for actual image */}
+        <div className={`aspect-[3/2] ${category.color} flex items-center justify-center relative overflow-hidden`}>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent group-hover:from-black/30 transition-colors"></div>
+          <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20 group-hover:bg-black/20 transition-colors">
+            <p className="text-cloud-white text-center font-medium text-sm">
+              📷 {category.imagePlaceholder}
+            </p>
+          </div>
         </div>
         <div className="p-6">
           <h3 className="font-bold text-xl text-tampa-dark mb-2 group-hover:text-tampa-blue transition-colors">

@@ -84,11 +84,14 @@ const Nightlife = () => {
   const NightlifeCard = ({ spot }: { spot: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        <div className="aspect-[4/3] bg-gradient-to-br from-purple-900/80 to-pink-900/80 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
-          <div className="absolute inset-0 bg-black/40"></div>
-          <p className="text-white text-center text-sm p-2 relative z-10">
-            {spot.imagePlaceholder}
-          </p>
+        {/* Image placeholder - ready for actual image */}
+        <div className="aspect-[4/3] bg-gradient-to-br from-purple-900/60 to-coral-pink/60 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+          <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <p className="text-cloud-white text-center font-medium text-sm">
+              📷 {spot.imagePlaceholder}
+            </p>
+          </div>
         </div>
         
         <div className="flex items-center justify-between mb-2">

@@ -98,10 +98,14 @@ const Beaches = () => {
   const BeachCard = ({ beach }: { beach: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-lg transition-all duration-300">
       <CardContent className="p-6">
-        <div className="aspect-[4/3] bg-tampa-blue/20 rounded-lg mb-4 flex items-center justify-center">
-          <p className="text-tampa-gray text-center text-sm p-2">
-            {beach.imagePlaceholder}
-          </p>
+        {/* Image placeholder - ready for actual image */}
+        <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+            <p className="text-cloud-white text-center font-medium text-sm">
+              📷 {beach.imagePlaceholder}
+            </p>
+          </div>
         </div>
         
         <div className="flex items-center justify-between mb-2">

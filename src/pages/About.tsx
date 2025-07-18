@@ -77,10 +77,14 @@ const About = () => {
             {adventures.map((adventure, index) => (
               <Card key={index} className="bg-white/80 backdrop-blur-sm border-tampa-blue/20">
                 <CardContent className="p-4">
-                  <div className="aspect-square bg-tampa-blue/20 rounded-lg mb-4 flex items-center justify-center">
-                    <p className="text-tampa-gray text-center text-sm p-2">
-                      {adventure.image}
-                    </p>
+                  {/* Image placeholder - ready for actual image */}
+                  <div className="aspect-square bg-gradient-to-br from-ocean-blue/30 to-sunset-orange/30 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                      <p className="text-night-navy text-center font-medium text-sm">
+                        📷 {adventure.image}
+                      </p>
+                    </div>
                   </div>
                   <h4 className="font-semibold text-tampa-dark text-center">
                     {adventure.title}

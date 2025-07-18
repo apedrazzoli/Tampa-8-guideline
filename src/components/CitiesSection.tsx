@@ -54,11 +54,14 @@ const CitiesSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <CardContent className="p-0">
-                <div className={`aspect-[4/3] ${city.gradient} rounded-t-2xl mb-6 flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <p className="relative text-cloud-white text-center p-4 font-medium z-10">
-                    {city.imagePlaceholder}
-                  </p>
+                {/* Image placeholder - ready for actual image */}
+                <div className={`aspect-[4/3] ${city.gradient} rounded-t-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+                  <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <p className="text-cloud-white text-center font-medium text-sm">
+                      📷 {city.imagePlaceholder}
+                    </p>
+                  </div>
                   <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>

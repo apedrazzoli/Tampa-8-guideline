@@ -163,11 +163,14 @@ const Restaurants = () => {
   const RestaurantCard = ({ restaurant }: { restaurant: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        <div className="aspect-[4/3] bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          <p className="text-tampa-gray text-center text-sm p-2 relative z-10">
-            {restaurant.imagePlaceholder}
-          </p>
+        {/* Image placeholder - ready for actual image */}
+        <div className="aspect-[4/3] bg-gradient-to-br from-sunset-orange/30 to-coral-pink/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+            <p className="text-cloud-white text-center font-medium text-sm">
+              📷 {restaurant.imagePlaceholder}
+            </p>
+          </div>
         </div>
         
         <div className="flex items-center justify-between mb-2">
