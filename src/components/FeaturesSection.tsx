@@ -2,33 +2,39 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Utensils, Waves, Music, Gamepad2 } from 'lucide-react';
 
+// Import feature images
+import restaurantImage from '@/assets/elegant-restaurant-dining.jpg';
+import beachImage from '@/assets/beach-paradise.jpg';
+import nightlifeImage from '@/assets/vibrant-nightlife.jpg';
+import activitiesImage from '@/assets/recreational-activities.jpg';
+
 const FeaturesSection = () => {
   const features = [
     {
       title: 'Restaurants',
       description: 'From upscale dining to casual hangouts, discover the best eats across Tampa Bay with curated recommendations',
-      imagePlaceholder: 'Elegant restaurant dining experience',
+      image: restaurantImage,
       icon: Utensils,
       gradient: 'bg-gradient-sunset'
     },
     {
       title: 'Beaches',
       description: 'Sun, sand, and endless activities at the most beautiful beaches in Florida with crystal clear waters',
-      imagePlaceholder: 'Pristine Tampa Bay beach paradise',
+      image: beachImage,
       icon: Waves,
       gradient: 'bg-gradient-ocean'
     },
     {
       title: 'Nightlife',
       description: '18+ clubs, karaoke bars, and late-night spots for unforgettable nights out in the city',
-      imagePlaceholder: 'Vibrant nightlife entertainment scene',
+      image: nightlifeImage,
       icon: Music,
       gradient: 'bg-coral-pink'
     },
     {
       title: 'Activities',
       description: 'Adventure sports, arcades, mini golf, and unique experiences for every mood and interest',
-      imagePlaceholder: 'Exciting recreational activities',
+      image: activitiesImage,
       icon: Gamepad2,
       gradient: 'bg-palm-green'
     }
@@ -71,14 +77,14 @@ const FeaturesSection = () => {
                     </p>
                   </div>
                   
-                  {/* Image placeholder - ready for actual image */}
-                  <div className={`aspect-[16/9] ${feature.gradient} flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
+                  {/* Feature Image */}
+                  <div className="aspect-[16/9] overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
-                    <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                      <p className="text-cloud-white text-center font-medium">
-                        📷 {feature.imagePlaceholder}
-                      </p>
-                    </div>
                   </div>
                 </CardContent>
               </Card>

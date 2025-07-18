@@ -2,33 +2,39 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, MapPin } from 'lucide-react';
 
+// Import city images
+import tampaImage from '@/assets/tampa-skyline-sunset.jpg';
+import stPeteImage from '@/assets/st-pete-arts-district.jpg';
+import clearwaterImage from '@/assets/clearwater-beach-paradise.jpg';
+import dunedinImage from '@/assets/dunedin-historic-downtown.jpg';
+
 const CitiesSection = () => {
   const cities = [
     {
       name: 'Tampa',
       description: 'The heart of the bay with vibrant dining and nightlife scene',
-      imagePlaceholder: 'Tampa skyline at sunset',
+      image: tampaImage,
       gradient: 'bg-gradient-ocean',
       accent: 'text-ocean-blue'
     },
     {
       name: 'St. Petersburg',
       description: 'Artsy downtown with waterfront dining and rich culture',
-      imagePlaceholder: 'St. Petersburg waterfront arts district',
+      image: stPeteImage,
       gradient: 'bg-gradient-sunset',
       accent: 'text-sunset-orange'
     },
     {
       name: 'Clearwater',
       description: 'Beautiful beaches and laid-back coastal vibes',
-      imagePlaceholder: 'Clearwater Beach crystal clear waters',
+      image: clearwaterImage,
       gradient: 'bg-coral-pink',
       accent: 'text-coral-pink'
     },
     {
       name: 'Dunedin',
       description: 'Charming small town with unique dining experiences',
-      imagePlaceholder: 'Dunedin historic downtown charm',
+      image: dunedinImage,
       gradient: 'bg-palm-green',
       accent: 'text-palm-green'
     }
@@ -54,14 +60,14 @@ const CitiesSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <CardContent className="p-0">
-                {/* Image placeholder - ready for actual image */}
-                <div className={`aspect-[4/3] ${city.gradient} rounded-t-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
+                {/* City Image */}
+                <div className="aspect-[4/3] rounded-t-2xl mb-6 overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src={city.image} 
+                    alt={city.name}
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
-                  <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <p className="text-cloud-white text-center font-medium text-sm">
-                      📷 {city.imagePlaceholder}
-                    </p>
-                  </div>
                   <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
