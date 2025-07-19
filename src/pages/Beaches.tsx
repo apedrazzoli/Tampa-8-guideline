@@ -7,6 +7,14 @@ import { MapPin } from 'lucide-react';
 import coconutCharliesImage from '@/assets/coconut-charlies-volleyball.jpg';
 import caddysImage from '@/assets/caddys-sunset-dining.jpg';
 import fortDeSotoImage from '@/assets/fort-de-soto-bike-trails.jpg';
+import passAGrilleImage from '@/assets/pass-a-grille-shops.jpg';
+import indianRocksImage from '@/assets/indian-rocks-peaceful.jpg';
+import apolloBeachImage from '@/assets/apollo-beach-wildlife.jpg';
+import davisIslandsImage from '@/assets/davis-islands-skyline.jpg';
+import treasureIslandImage from '@/assets/treasure-island-volleyball.jpg';
+import honeymoonIslandImage from '@/assets/honeymoon-island-trail.jpg';
+import stPeteBeachImage from '@/assets/st-pete-beach-parasailing.jpg';
+import whiteSandImage from '@/assets/white-sand-group-activities.jpg';
 
 const Beaches = () => {
   const beaches = [
@@ -34,7 +42,8 @@ const Beaches = () => {
       location: "St. Pete Beach",
       description: "Laid-back beach with shops and cafés",
       features: ["Shopping", "Cafés", "Walking", "Relaxing"],
-      imagePlaceholder: "Pass-a-Grille Beach shops"
+      imagePlaceholder: "Pass-a-Grille Beach shops",
+      image: passAGrilleImage
     },
     {
       name: "Fort De Soto",
@@ -51,7 +60,8 @@ const Beaches = () => {
       location: "Indian Rocks",
       description: "Quiet, wide beach for games and relaxing",
       features: ["Beach Games", "Swimming", "Sunbathing", "Walking"],
-      imagePlaceholder: "Indian Rocks Beach peaceful scene"
+      imagePlaceholder: "Indian Rocks Beach peaceful scene",
+      image: indianRocksImage
     },
     {
       name: "Apollo Beach",
@@ -59,7 +69,8 @@ const Beaches = () => {
       location: "Apollo Beach",
       description: "Peaceful with fishing and wildlife viewing",
       features: ["Fishing", "Wildlife Watching", "Photography", "Nature"],
-      imagePlaceholder: "Apollo Beach wildlife"
+      imagePlaceholder: "Apollo Beach wildlife",
+      image: apolloBeachImage
     },
     {
       name: "Davis Islands Beach",
@@ -67,7 +78,8 @@ const Beaches = () => {
       location: "Tampa",
       description: "Skyline views and a local, chill scene",
       features: ["City Views", "Local Hangout", "Swimming", "Picnics"],
-      imagePlaceholder: "Davis Islands with Tampa skyline"
+      imagePlaceholder: "Davis Islands with Tampa skyline",
+      image: davisIslandsImage
     },
     {
       name: "Treasure Island",
@@ -75,7 +87,8 @@ const Beaches = () => {
       location: "Treasure Island",
       description: "Volleyball courts, water sports, and beach bars",
       features: ["Volleyball", "Water Sports", "Beach Bars", "Rentals"],
-      imagePlaceholder: "Treasure Island volleyball"
+      imagePlaceholder: "Treasure Island volleyball",
+      image: treasureIslandImage
     },
     {
       name: "Honeymoon Island",
@@ -83,7 +96,8 @@ const Beaches = () => {
       location: "Dunedin",
       description: "Shelling, trails, and natural beauty",
       features: ["Shelling", "Nature Trails", "Wildlife", "Photography"],
-      imagePlaceholder: "Honeymoon Island nature trail"
+      imagePlaceholder: "Honeymoon Island nature trail",
+      image: honeymoonIslandImage
     },
     {
       name: "St. Pete Beach",
@@ -91,7 +105,8 @@ const Beaches = () => {
       location: "St. Pete Beach",
       description: "Classic busy beach with parasailing and shops",
       features: ["Parasailing", "Shopping", "Water Sports", "Dining"],
-      imagePlaceholder: "St. Pete Beach parasailing"
+      imagePlaceholder: "St. Pete Beach parasailing",
+      image: stPeteBeachImage
     },
     {
       name: "White Sand Beach",
@@ -99,7 +114,8 @@ const Beaches = () => {
       location: "Clearwater",
       description: "Soft sand, perfect for games and group outings",
       features: ["Beach Games", "Group Activities", "Swimming", "Sunbathing"],
-      imagePlaceholder: "White Sand Beach group activities"
+      imagePlaceholder: "White Sand Beach group activities",
+      image: whiteSandImage
     }
   ];
 
