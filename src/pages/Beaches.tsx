@@ -3,6 +3,11 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin } from 'lucide-react';
 
+// Import beach images
+import coconutCharliesImage from '@/assets/coconut-charlies-volleyball.jpg';
+import caddysImage from '@/assets/caddys-sunset-dining.jpg';
+import fortDeSotoImage from '@/assets/fort-de-soto-bike-trails.jpg';
+
 const Beaches = () => {
   const beaches = [
     {
@@ -11,7 +16,8 @@ const Beaches = () => {
       location: "Clearwater",
       description: "Beach bar with music, volleyball, and mocktails",
       features: ["Volleyball", "Live Music", "Mocktails", "Beach Games"],
-      imagePlaceholder: "Coconut Charlie's beach volleyball"
+      imagePlaceholder: "Coconut Charlie's beach volleyball",
+      image: coconutCharliesImage
     },
     {
       name: "Caddy's on the Beach",
@@ -19,7 +25,8 @@ const Beaches = () => {
       location: "Treasure Island",
       description: "Food, music, and sunsets on the sand",
       features: ["Live Music", "Sunset Views", "Beach Dining", "Dancing"],
-      imagePlaceholder: "Caddy's sunset dining"
+      imagePlaceholder: "Caddy's sunset dining",
+      image: caddysImage
     },
     {
       name: "Pass-a-Grille Beach",
@@ -35,7 +42,8 @@ const Beaches = () => {
       location: "St. Petersburg",
       description: "Multiple beaches, bike trails, dog beach, and history",
       features: ["Biking", "Dog Beach", "History", "Multiple Beaches"],
-      imagePlaceholder: "Fort De Soto bike trails"
+      imagePlaceholder: "Fort De Soto bike trails",
+      image: fortDeSotoImage
     },
     {
       name: "Indian Rocks Beach",
@@ -98,14 +106,29 @@ const Beaches = () => {
   const BeachCard = ({ beach }: { beach: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-lg transition-all duration-300">
       <CardContent className="p-6">
-        {/* Image placeholder - ready for actual image */}
-        <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
-            <p className="text-cloud-white text-center font-medium text-sm">
-              📷 {beach.imagePlaceholder}
-            </p>
-          </div>
+        {/* Beach image */}
+        <div className="aspect-[4/3] rounded-lg mb-4 overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          {beach.image ? (
+            <>
+              <img 
+                src={beach.image} 
+                alt={beach.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </>
+          ) : (
+            <>
+              <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                  <p className="text-cloud-white text-center font-medium text-sm">
+                    📷 {beach.imagePlaceholder}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         
         <div className="flex items-center justify-between mb-2">

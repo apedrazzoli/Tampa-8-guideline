@@ -2,11 +2,16 @@
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 
+// Import adventure images
+import exploringTampaImage from '@/assets/exploring-tampa-adventure.jpg';
+import beachAdventuresImage from '@/assets/beach-day-adventures.jpg';
+import foodDiscoveriesImage from '@/assets/food-discoveries-tampa.jpg';
+
 const About = () => {
   const adventures = [
-    { title: 'Exploring Tampa', image: 'Exploring Tampa' },
-    { title: 'Beach Adventures', image: 'Beach day adventures' },
-    { title: 'Food Discoveries', image: 'Food discoveries' }
+    { title: 'Exploring Tampa', image: 'Exploring Tampa', src: exploringTampaImage },
+    { title: 'Beach Adventures', image: 'Beach day adventures', src: beachAdventuresImage },
+    { title: 'Food Discoveries', image: 'Food discoveries', src: foodDiscoveriesImage }
   ];
 
   return (
@@ -16,7 +21,7 @@ const About = () => {
         subtitle="From New York to Tampa – discovering fun without limits"
         primaryButtonText="Explore My Discoveries"
         primaryButtonLink="/activities"
-        imagePlaceholder="Alessia Pedrazzoli photo"
+        imagePlaceholder="Founder photo placeholder - Add your photo here"
       />
 
       {/* Profile Section */}
@@ -77,14 +82,29 @@ const About = () => {
             {adventures.map((adventure, index) => (
               <Card key={index} className="bg-white/80 backdrop-blur-sm border-tampa-blue/20">
                 <CardContent className="p-4">
-                  {/* Image placeholder - ready for actual image */}
-                  <div className="aspect-square bg-gradient-to-br from-ocean-blue/30 to-sunset-orange/30 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
-                      <p className="text-night-navy text-center font-medium text-sm">
-                        📷 {adventure.image}
-                      </p>
-                    </div>
+                  {/* Adventure image */}
+                  <div className="aspect-square rounded-lg mb-4 overflow-hidden relative hover:scale-105 transition-transform duration-300">
+                    {adventure.src ? (
+                      <>
+                        <img 
+                          src={adventure.src} 
+                          alt={adventure.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="aspect-square bg-gradient-to-br from-ocean-blue/30 to-sunset-orange/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                            <p className="text-night-navy text-center font-medium text-sm">
+                              📷 {adventure.image}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <h4 className="font-semibold text-tampa-dark text-center">
                     {adventure.title}

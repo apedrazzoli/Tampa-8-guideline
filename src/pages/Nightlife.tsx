@@ -3,6 +3,12 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Music, Users, Clock } from 'lucide-react';
 
+// Import nightlife images
+import showbarImage from '@/assets/showbar-live-performance.jpg';
+import tangraImage from '@/assets/tangra-modern-nightclub.jpg';
+import clubPranaImage from '@/assets/club-prana-multi-level.jpg';
+import petesPlaceImage from '@/assets/petes-place-karaoke.jpg';
+
 const Nightlife = () => {
   const nightlifeSpots = [
     {
@@ -12,7 +18,8 @@ const Nightlife = () => {
       district: "Ybor City",
       description: "High-energy club with live performances and dancing",
       features: ["Live Shows", "Dancing", "18+", "High Energy"],
-      imagePlaceholder: "Showbar live performance stage with dancing crowd"
+      imagePlaceholder: "Showbar live performance stage with dancing crowd",
+      image: showbarImage
     },
     {
       name: "Tangra",
@@ -21,7 +28,8 @@ const Nightlife = () => {
       district: "Ybor City",
       description: "Trendy nightclub with DJ sets and modern vibes",
       features: ["DJ Sets", "Modern Atmosphere", "18+", "Trendy"],
-      imagePlaceholder: "Tangra modern nightclub with DJ booth"
+      imagePlaceholder: "Tangra modern nightclub with DJ booth",
+      image: tangraImage
     },
     {
       name: "Club Prana",
@@ -30,7 +38,8 @@ const Nightlife = () => {
       district: "Ybor City", 
       description: "Multi-level club with different music styles",
       features: ["Multiple Floors", "Varied Music", "18+", "Large Venue"],
-      imagePlaceholder: "Club Prana multi-level interior with different floors"
+      imagePlaceholder: "Club Prana multi-level interior with different floors",
+      image: clubPranaImage
     },
     {
       name: "HPC",
@@ -48,7 +57,8 @@ const Nightlife = () => {
       district: "SoHo",
       description: "Local favorite karaoke spot full of friendly faces",
       features: ["Karaoke", "Local Crowd", "Friendly", "Sing-Along Fun"],
-      imagePlaceholder: "Pete's Place karaoke stage with singing patrons"
+      imagePlaceholder: "Pete's Place karaoke stage with singing patrons",
+      image: petesPlaceImage
     },
     {
       name: "Ivy Rose",
@@ -84,14 +94,29 @@ const Nightlife = () => {
   const NightlifeCard = ({ spot }: { spot: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        {/* Image placeholder - ready for actual image */}
-        <div className="aspect-[4/3] bg-gradient-to-br from-purple-900/60 to-coral-pink/60 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
-          <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-            <p className="text-cloud-white text-center font-medium text-sm">
-              📷 {spot.imagePlaceholder}
-            </p>
-          </div>
+        {/* Nightlife spot image */}
+        <div className="aspect-[4/3] rounded-lg mb-4 overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          {spot.image ? (
+            <>
+              <img 
+                src={spot.image} 
+                alt={spot.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+            </>
+          ) : (
+            <>
+              <div className="aspect-[4/3] bg-gradient-to-br from-purple-900/60 to-coral-pink/60 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+                <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                  <p className="text-cloud-white text-center font-medium text-sm">
+                    📷 {spot.imagePlaceholder}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         
         <div className="flex items-center justify-between mb-2">

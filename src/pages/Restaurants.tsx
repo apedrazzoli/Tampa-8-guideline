@@ -3,6 +3,13 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Star, Coffee, Utensils } from 'lucide-react';
 
+// Import restaurant images
+import oxfordExchangeImage from '@/assets/oxford-exchange-cafe.jpg';
+import buddyBrewImage from '@/assets/buddy-brew-coffee.jpg';
+import firstWatchImage from '@/assets/first-watch-healthy-breakfast.jpg';
+import oliviaImage from '@/assets/olivia-restaurant-open-kitchen.jpg';
+import besosImage from '@/assets/besos-tableside-guac.jpg';
+
 const Restaurants = () => {
   const restaurants = [
     // Tampa
@@ -13,7 +20,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Upscale café with artisanal coffee and gourmet breakfast",
       features: ["Artisanal Coffee", "Gourmet Breakfast", "Instagram-Worthy", "Study Spot"],
-      imagePlaceholder: "Oxford Exchange elegant café interior with books and coffee"
+      imagePlaceholder: "Oxford Exchange elegant café interior with books and coffee",
+      image: oxfordExchangeImage
     },
     {
       name: "Buddy Brew Coffee", 
@@ -22,7 +30,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Local coffee roaster with amazing breakfast sandwiches",
       features: ["Local Roaster", "Breakfast Sandwiches", "Multiple Locations", "Student Friendly"],
-      imagePlaceholder: "Buddy Brew Coffee shop with local roasting equipment"
+      imagePlaceholder: "Buddy Brew Coffee shop with local roasting equipment",
+      image: buddyBrewImage
     },
     {
       name: "First Watch",
@@ -31,7 +40,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Fresh breakfast and brunch with healthy options",
       features: ["Healthy Options", "Fresh Ingredients", "Brunch Menu", "Casual Dining"],
-      imagePlaceholder: "First Watch fresh healthy breakfast spread"
+      imagePlaceholder: "First Watch fresh healthy breakfast spread",
+      image: firstWatchImage
     },
     {
       name: "Olivia",
@@ -40,7 +50,8 @@ const Restaurants = () => {
       city: "Tampa", 
       description: "Modern Italian with an open kitchen",
       features: ["Open Kitchen", "Modern Italian", "Great Atmosphere"],
-      imagePlaceholder: "Olivia restaurant open kitchen with Italian dishes"
+      imagePlaceholder: "Olivia restaurant open kitchen with Italian dishes",
+      image: oliviaImage
     },
     {
       name: "Besos",
@@ -49,7 +60,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Upscale Mexican, tableside guac, cocktails", 
       features: ["Tableside Guac", "Craft Cocktails", "Mexican Cuisine"],
-      imagePlaceholder: "Besos upscale Mexican restaurant with tableside guac preparation"
+      imagePlaceholder: "Besos upscale Mexican restaurant with tableside guac preparation",
+      image: besosImage
     },
     {
       name: "Timpano",
@@ -163,14 +175,29 @@ const Restaurants = () => {
   const RestaurantCard = ({ restaurant }: { restaurant: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        {/* Image placeholder - ready for actual image */}
-        <div className="aspect-[4/3] bg-gradient-to-br from-sunset-orange/30 to-coral-pink/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
-          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
-            <p className="text-cloud-white text-center font-medium text-sm">
-              📷 {restaurant.imagePlaceholder}
-            </p>
-          </div>
+        {/* Restaurant image */}
+        <div className="aspect-[4/3] rounded-lg mb-4 overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          {restaurant.image ? (
+            <>
+              <img 
+                src={restaurant.image} 
+                alt={restaurant.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+            </>
+          ) : (
+            <>
+              <div className="aspect-[4/3] bg-gradient-to-br from-sunset-orange/30 to-coral-pink/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+                <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                  <p className="text-cloud-white text-center font-medium text-sm">
+                    📷 {restaurant.imagePlaceholder}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         
         <div className="flex items-center justify-between mb-2">

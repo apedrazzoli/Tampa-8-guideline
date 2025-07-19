@@ -3,6 +3,10 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Star } from 'lucide-react';
 
+// Import activity images
+import eliteWaterSportsImage from '@/assets/elite-water-sports-jetski.jpg';
+import gamingArcadeImage from '@/assets/gaming-arcade-scene.jpg';
+
 const Activities = () => {
   const featuredActivities = [
     {
@@ -35,7 +39,8 @@ const Activities = () => {
       location: "Tampa Bay",
       description: "Jet skiing, parasailing, and water adventures",
       features: ["Jet Skiing", "Parasailing", "Water Sports", "Adventures"],
-      imagePlaceholder: "Elite Water Sports jet skiing on Tampa Bay"
+      imagePlaceholder: "Elite Water Sports jet skiing on Tampa Bay",
+      image: eliteWaterSportsImage
     }
   ];
 
@@ -66,21 +71,37 @@ const Activities = () => {
       description: "Level up your fun at Tampa's best arcades",
       link: "/activities",
       imagePlaceholder: "Gaming arcade scene",
-      color: "bg-gradient-to-br from-green-400 to-emerald-500"
+      color: "bg-gradient-to-br from-green-400 to-emerald-500",
+      image: gamingArcadeImage
     }
   ];
 
   const ActivityCard = ({ activity }: { activity: any }) => (
     <Card className="bg-white border-tampa-blue/20 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <CardContent className="p-6">
-        {/* Image placeholder - ready for actual image */}
-        <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
-            <p className="text-cloud-white text-center font-medium text-sm">
-              📷 {activity.imagePlaceholder}
-            </p>
-          </div>
+        {/* Activity image */}
+        <div className="aspect-[4/3] rounded-lg mb-4 overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+          {activity.image ? (
+            <>
+              <img 
+                src={activity.image} 
+                alt={activity.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </>
+          ) : (
+            <>
+              <div className="aspect-[4/3] bg-gradient-to-br from-ocean-blue/30 to-palm-green/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="relative z-10 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                  <p className="text-cloud-white text-center font-medium text-sm">
+                    📷 {activity.imagePlaceholder}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         
         <div className="flex items-center justify-between mb-2">
@@ -116,14 +137,27 @@ const Activities = () => {
   const CategoryCard = ({ category }: { category: any }) => (
     <Card className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
       <CardContent className="p-0">
-        {/* Image placeholder - ready for actual image */}
+        {/* Category image */}
         <div className={`aspect-[3/2] ${category.color} flex items-center justify-center relative overflow-hidden`}>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent group-hover:from-black/30 transition-colors"></div>
-          <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20 group-hover:bg-black/20 transition-colors">
-            <p className="text-cloud-white text-center font-medium text-sm">
-              📷 {category.imagePlaceholder}
-            </p>
-          </div>
+          {category.image ? (
+            <>
+              <img 
+                src={category.image} 
+                alt={category.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent group-hover:from-black/30 transition-colors"></div>
+            </>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent group-hover:from-black/30 transition-colors"></div>
+              <div className="relative z-10 bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-white/20 group-hover:bg-black/20 transition-colors">
+                <p className="text-cloud-white text-center font-medium text-sm">
+                  📷 {category.imagePlaceholder}
+                </p>
+              </div>
+            </>
+          )}
         </div>
         <div className="p-6">
           <h3 className="font-bold text-xl text-tampa-dark mb-2 group-hover:text-tampa-blue transition-colors">
