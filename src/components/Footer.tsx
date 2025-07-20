@@ -26,18 +26,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-heading font-semibold">Explore</h4>
             <div className="grid grid-cols-2 gap-2">
-<a href="/restaurants" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+<Link to="/restaurants" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
   Restaurants
-</a>
-<a href="/beaches" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+</Link>
+<Link to="/beaches" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
   Beaches
-</a>
-<a href="/nightlife" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+</Link>
+<Link to="/nightlife" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
   Nightlife
-</a>
-<a href="/activities" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+</Link>
+<Link to="/activities" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
   Activities
-</a>
+  </Link>
 
 
             </div>
