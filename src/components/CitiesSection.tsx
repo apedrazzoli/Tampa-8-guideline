@@ -1,8 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, MapPin } from 'lucide-react';
-
-// Import city images
 import tampaImage from '@/assets/tampa-skyline-sunset.jpg';
 import stPeteImage from '@/assets/st-pete-arts-district.jpg';
 import clearwaterImage from '@/assets/clearwater-beach-paradise.jpg';

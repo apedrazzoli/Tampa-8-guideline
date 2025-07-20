@@ -11,7 +11,7 @@ import fortDeSotoCyclingImage from '@/assets/fort-de-soto-cycling.jpg';
 import tampaRestaurantImage from '@/assets/tampa-restaurant-scene.jpg';
 import stPeteNightlifeImage from '@/assets/st-pete-nightlife-scene.jpg';
 import clearwaterSunsetImage from '@/assets/clearwater-beach-sunset.jpg';
-
+import clubparana from '@/assets/club-prana-multi-level.jpg'
 const Activities = () => {
   const featuredActivities = [
     {
@@ -38,7 +38,7 @@ const Activities = () => {
       location: "Ybor City",
       description: "Multi-level 18+ club with different music on each floor",
       features: ["18+", "Multi-Level", "Live Music", "Dancing"],
-      imagePlaceholder: "Club Prana multi-level nightclub interior"
+      image: clubparana
     },
     {
       name: "Elite Water Sports",
@@ -222,21 +222,7 @@ const Activities = () => {
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-tampa-blue to-tampa-blue-light py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-tampa-dark mb-4">
-            Ready for Your Next Adventure?
-          </h2>
-          <p className="text-lg text-tampa-gray mb-8">
-            Browse all our categories to discover everything Tampa Bay has to offer
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Restaurants", "Beaches", "Nightlife", "Activities"].map((category) => (
-              <div key={category} className="bg-white/80 backdrop-blur-sm rounded-lg p-4 hover:bg-white transition-colors cursor-pointer">
-                <span className="font-semibold text-tampa-dark">{category}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </div>
   );

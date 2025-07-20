@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Star } from 'lucide-react';
@@ -10,7 +9,8 @@ interface HeroSectionProps {
   primaryButtonLink?: string;
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
-  imagePlaceholder?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const HeroSection = ({
@@ -20,7 +20,8 @@ const HeroSection = ({
   primaryButtonLink,
   secondaryButtonText,
   secondaryButtonLink,
-  imagePlaceholder
+  image,
+  imageAlt = '',
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-screen flex items-center bg-gradient-beach overflow-hidden">
@@ -90,15 +91,22 @@ const HeroSection = ({
             </div>
           </div>
           
-          {imagePlaceholder && (
+          {/* Updated image section */}
+          {image ? (
             <div className="relative lg:animate-scale-in" style={{animationDelay: '0.3s'}}>
-              <div className="aspect-[4/3] glass rounded-3xl p-8 hover-lift">
-                <div className="w-full h-full bg-gradient-ocean rounded-2xl flex items-center justify-center">
-                  <p className="text-cloud-white text-center p-6 font-medium">
-                    {imagePlaceholder}
-                  </p>
-                </div>
+              <div className="aspect-[3/4] glass rounded-3xl p-8 hover-lift overflow-hidden">
+                <img 
+                  src={image} 
+                  alt={imageAlt}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-sunset rounded-full opacity-80 animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-palm-green rounded-full opacity-60 animate-float" style={{animationDelay: '2s'}}></div>
+            </div>
+          ) : (
+            <div className="relative lg:animate-scale-in" style={{animationDelay: '0.3s'}}>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-sunset rounded-full opacity-80 animate-float"></div>
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-palm-green rounded-full opacity-60 animate-float" style={{animationDelay: '2s'}}></div>

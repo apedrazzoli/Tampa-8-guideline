@@ -1,5 +1,6 @@
 
 import { MapPin, Mail, Phone, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-heading font-bold text-gradient">
-              Fun and The City
+              Fun and The City - Guide 
             </h3>
             <p className="text-warm-gray leading-relaxed">
               Discovering Tampa Bay's best 18+ experiences, one adventure at a time. 
@@ -25,18 +26,20 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-heading font-semibold">Explore</h4>
             <div className="grid grid-cols-2 gap-2">
-              <a href="/restaurants" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-                Restaurants
-              </a>
-              <a href="/beaches" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-                Beaches
-              </a>
-              <a href="/nightlife" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-                Nightlife
-              </a>
-              <a href="/activities" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-                Activities
-              </a>
+<a href="/restaurants" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+  Restaurants
+</a>
+<a href="/beaches" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+  Beaches
+</a>
+<a href="/nightlife" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+  Nightlife
+</a>
+<a href="/activities" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
+  Activities
+</a>
+
+
             </div>
           </div>
 
@@ -65,15 +68,7 @@ const Footer = () => {
             © 2024 Fun and The City. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-              Terms of Service
-            </a>
-            <a href="#" className="text-warm-gray hover:text-ocean-blue transition-colors duration-200">
-              Contact
-            </a>
+       
           </div>
         </div>
       </div>

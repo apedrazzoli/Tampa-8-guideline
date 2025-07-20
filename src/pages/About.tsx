@@ -1,7 +1,7 @@
 
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
-
+import founderImage from '@/assets/alessia.jpg';
 // Import adventure images
 import exploringTampaImage from '@/assets/exploring-tampa-adventure.jpg';
 import beachAdventuresImage from '@/assets/beach-day-adventures.jpg';
@@ -21,7 +21,9 @@ const About = () => {
         subtitle="From New York to Tampa – discovering fun without limits"
         primaryButtonText="Explore My Discoveries"
         primaryButtonLink="/activities"
-        imagePlaceholder="Founder photo placeholder - Add your photo here"
+        image={founderImage}
+        imageAlt='this is aleeza'
+
       />
 
       {/* Profile Section */}

@@ -17,7 +17,7 @@ const Index = () => {
         primaryButtonLink="/activities"
         secondaryButtonText="My Story"
         secondaryButtonLink="/about"
-        imagePlaceholder="Beautiful Tampa Bay skyline with vibrant sunset colors"
+        
       />
       
       <StatsSection />
@@ -48,7 +48,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <Link to="/activities">
+            <Link to="/Activities">
               <Button className="group bg-cloud-white text-ocean-blue-dark hover:bg-sand-beige font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 Start Your Adventure
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
