@@ -8,6 +8,10 @@ import showbarImage from '@/assets/showbar-live-performance.jpg';
 import tangraImage from '@/assets/tangra-modern-nightclub.jpg';
 import clubPranaImage from '@/assets/club-prana-multi-level.jpg';
 import petesPlaceImage from '@/assets/petes-place-karaoke.jpg';
+import hpcBarImage from '@/assets/hpc-bar-social.jpg';
+import ivyRoseImage from '@/assets/ivy-rose-lounge.jpg';
+import littClubImage from '@/assets/litt-club-dancefloor.jpg';
+import edenNightclubImage from '@/assets/eden-nightclub-modern.jpg';
 
 const Nightlife = () => {
   const nightlifeSpots = [
@@ -48,7 +52,8 @@ const Nightlife = () => {
       district: "SoHo",
       description: "Popular spot with great music and social atmosphere",
       features: ["Social Scene", "Great Music", "Popular", "Energetic"],
-      imagePlaceholder: "HPC bar club with social crowd and music"
+      imagePlaceholder: "HPC bar club with social crowd and music",
+      image: hpcBarImage
     },
     {
       name: "Pete's Place Karaoke Bar",
@@ -67,7 +72,8 @@ const Nightlife = () => {
       district: "Downtown Tampa",
       description: "Upscale lounge with sophisticated atmosphere",
       features: ["Upscale", "Sophisticated", "Cocktails", "Elegant"],
-      imagePlaceholder: "Ivy Rose upscale lounge interior with elegant decor"
+      imagePlaceholder: "Ivy Rose upscale lounge interior with elegant decor",
+      image: ivyRoseImage
     },
     {
       name: "Litt Club", 
@@ -76,7 +82,8 @@ const Nightlife = () => {
       district: "Downtown Tampa",
       description: "High-energy club with top DJs and dancing",
       features: ["Top DJs", "Dancing", "High Energy", "Popular"],
-      imagePlaceholder: "Litt Club dance floor with DJ and crowd"
+      imagePlaceholder: "Litt Club dance floor with DJ and crowd",
+      image: littClubImage
     },
     {
       name: "Eden",
@@ -85,7 +92,8 @@ const Nightlife = () => {
       district: "Downtown Tampa",
       description: "Trendy nightspot with modern design and great vibes",
       features: ["Modern Design", "Great Vibes", "Trendy", "Stylish"],
-      imagePlaceholder: "Eden nightclub modern stylish interior"
+      imagePlaceholder: "Eden nightclub modern stylish interior",
+      image: edenNightclubImage
     }
   ];
 

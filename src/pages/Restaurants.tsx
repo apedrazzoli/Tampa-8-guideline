@@ -9,6 +9,16 @@ import buddyBrewImage from '@/assets/buddy-brew-coffee.jpg';
 import firstWatchImage from '@/assets/first-watch-healthy-breakfast.jpg';
 import oliviaImage from '@/assets/olivia-restaurant-open-kitchen.jpg';
 import besosImage from '@/assets/besos-tableside-guac.jpg';
+import timpanoImage from '@/assets/timpano-lively-dining.jpg';
+import bartacoImage from '@/assets/bartaco-coastal-tacos.jpg';
+import bullaRooftopImage from '@/assets/bulla-rooftop-dining.jpg';
+import theMillImage from '@/assets/the-mill-trendy-breakfast.jpg';
+import rubysElixirImage from '@/assets/rubys-elixir-smoothie-bowls.jpg';
+import cevicheImage from '@/assets/ceviche-flamenco-tapas.jpg';
+import birchwoodImage from '@/assets/birchwood-rooftop-sunset.jpg';
+import lennysDinerImage from '@/assets/lennys-classic-diner.jpg';
+import cafeAlfrescoImage from '@/assets/cafe-alfresco-european.jpg';
+import casaTinaImage from '@/assets/casa-tina-festive-mexican.jpg';
 
 const Restaurants = () => {
   const restaurants = [
@@ -70,7 +80,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Bold Italian-American with a lively scene",
       features: ["Italian-American", "Energetic Vibe", "Great for Groups"],
-      imagePlaceholder: "Timpano lively Italian-American restaurant atmosphere"
+      imagePlaceholder: "Timpano lively Italian-American restaurant atmosphere",
+      image: timpanoImage
     },
     {
       name: "Bartaco",
@@ -79,7 +90,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Coastal vibes, handheld bites",
       features: ["Coastal Theme", "Tacos", "Relaxed Atmosphere"],
-      imagePlaceholder: "Bartaco coastal themed restaurant with tacos"
+      imagePlaceholder: "Bartaco coastal themed restaurant with tacos",
+      image: bartacoImage
     },
     {
       name: "Bulla GastroBar",
@@ -88,7 +100,8 @@ const Restaurants = () => {
       city: "Tampa",
       description: "Rooftop lounge, Spanish tapas",
       features: ["Rooftop Views", "Spanish Tapas", "Lounge Atmosphere"],
-      imagePlaceholder: "Bulla GastroBar rooftop with Spanish tapas and city views"
+      imagePlaceholder: "Bulla GastroBar rooftop with Spanish tapas and city views",
+      image: bullaRooftopImage
     },
 
     // St. Petersburg
@@ -99,7 +112,8 @@ const Restaurants = () => {
       city: "St. Petersburg",
       description: "Trendy breakfast spot with creative dishes and great coffee",
       features: ["Creative Dishes", "Great Coffee", "Instagram-Worthy", "Local Favorite"],
-      imagePlaceholder: "The Mill trendy breakfast spot with creative plating"
+      imagePlaceholder: "The Mill trendy breakfast spot with creative plating",
+      image: theMillImage
     },
     {
       name: "Ruby's Elixir",
@@ -108,7 +122,8 @@ const Restaurants = () => {
       city: "St. Petersburg",
       description: "Health-focused café with smoothie bowls and avocado toast",
       features: ["Smoothie Bowls", "Avocado Toast", "Health-Focused", "Fresh Ingredients"],
-      imagePlaceholder: "Ruby's Elixir colorful smoothie bowls and healthy dishes"
+      imagePlaceholder: "Ruby's Elixir colorful smoothie bowls and healthy dishes",
+      image: rubysElixirImage
     },
     {
       name: "Ceviche",
@@ -117,7 +132,8 @@ const Restaurants = () => {
       city: "St. Petersburg", 
       description: "Flamenco, tapas, sangria, and festive energy",
       features: ["Flamenco Shows", "Spanish Tapas", "Festive Energy"],
-      imagePlaceholder: "Ceviche restaurant with flamenco performance and tapas"
+      imagePlaceholder: "Ceviche restaurant with flamenco performance and tapas",
+      image: cevicheImage
     },
     {
       name: "Birchwood",
@@ -126,7 +142,8 @@ const Restaurants = () => {
       city: "St. Petersburg",
       description: "Rooftop lounge, sunset views, and small plates",
       features: ["Sunset Views", "Small Plates", "Rooftop Lounge"],
-      imagePlaceholder: "Birchwood rooftop lounge with sunset views over water"
+      imagePlaceholder: "Birchwood rooftop lounge with sunset views over water",
+      image: birchwoodImage
     },
 
     // Clearwater  
@@ -137,7 +154,8 @@ const Restaurants = () => {
       city: "Clearwater",
       description: "Classic American breakfast diner with huge portions",
       features: ["Huge Portions", "Classic American", "Affordable", "Local Institution"],
-      imagePlaceholder: "Lenny's classic American diner with large breakfast plates"
+      imagePlaceholder: "Lenny's classic American diner with large breakfast plates",
+      image: lennysDinerImage
     },
     {
       name: "Island Way Grill",
@@ -157,7 +175,8 @@ const Restaurants = () => {
       city: "Dunedin", 
       description: "European-style café with fresh pastries and strong coffee",
       features: ["Fresh Pastries", "Strong Coffee", "European Style", "Outdoor Seating"],
-      imagePlaceholder: "Café Alfresco European style café with pastries and outdoor seating"
+      imagePlaceholder: "Café Alfresco European style café with pastries and outdoor seating",
+      image: cafeAlfrescoImage
     },
     {
       name: "Casa Tina",
@@ -166,7 +185,8 @@ const Restaurants = () => {
       city: "Dunedin",
       description: "Festive Mexican restaurant with a vibrant feel",
       features: ["Mexican Cuisine", "Vibrant Atmosphere", "Festive Decor"],
-      imagePlaceholder: "Casa Tina festive Mexican restaurant with colorful decor"
+      imagePlaceholder: "Casa Tina festive Mexican restaurant with colorful decor",
+      image: casaTinaImage
     }
   ];
 

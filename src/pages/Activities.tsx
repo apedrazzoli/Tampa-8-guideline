@@ -6,6 +6,11 @@ import { MapPin, Star } from 'lucide-react';
 // Import activity images
 import eliteWaterSportsImage from '@/assets/elite-water-sports-jetski.jpg';
 import gamingArcadeImage from '@/assets/gaming-arcade-scene.jpg';
+import bullaRooftopImage from '@/assets/bulla-rooftop-dining.jpg';
+import fortDeSotoCyclingImage from '@/assets/fort-de-soto-cycling.jpg';
+import tampaRestaurantImage from '@/assets/tampa-restaurant-scene.jpg';
+import stPeteNightlifeImage from '@/assets/st-pete-nightlife-scene.jpg';
+import clearwaterSunsetImage from '@/assets/clearwater-beach-sunset.jpg';
 
 const Activities = () => {
   const featuredActivities = [
@@ -15,7 +20,8 @@ const Activities = () => {
       location: "Tampa",
       description: "Rooftop Spanish tapas with amazing city views",
       features: ["Rooftop Views", "Spanish Tapas", "City Views", "Upscale"],
-      imagePlaceholder: "Bulla GastroBar rooftop dining with Tampa skyline"
+      imagePlaceholder: "Bulla GastroBar rooftop dining with Tampa skyline",
+      image: bullaRooftopImage
     },
     {
       name: "Fort De Soto Park",
@@ -23,7 +29,8 @@ const Activities = () => {
       location: "St. Petersburg", 
       description: "Multiple beaches, bike trails, and dog-friendly areas",
       features: ["Multiple Beaches", "Bike Trails", "Dog Friendly", "Nature"],
-      imagePlaceholder: "Fort De Soto bike trails and beach views"
+      imagePlaceholder: "Fort De Soto bike trails and beach views",
+      image: fortDeSotoCyclingImage
     },
     {
       name: "Club Prana",
@@ -50,21 +57,24 @@ const Activities = () => {
       description: "Discover the best dining spots in Tampa",
       link: "/restaurants",
       imagePlaceholder: "Tampa restaurant scene",
-      color: "bg-gradient-to-br from-orange-400 to-red-500"
+      color: "bg-gradient-to-br from-orange-400 to-red-500",
+      image: tampaRestaurantImage
     },
     {
       title: "St. Pete Nightlife", 
       description: "Explore St. Petersburg's vibrant night scene",
       link: "/nightlife",
       imagePlaceholder: "St. Petersburg nightlife",
-      color: "bg-gradient-to-br from-purple-500 to-pink-500"
+      color: "bg-gradient-to-br from-purple-500 to-pink-500",
+      image: stPeteNightlifeImage
     },
     {
       title: "Clearwater Beaches",
       description: "Find your perfect beach day spot",
       link: "/beaches",
       imagePlaceholder: "Clearwater Beach sunset",
-      color: "bg-gradient-to-br from-cyan-400 to-blue-500"
+      color: "bg-gradient-to-br from-cyan-400 to-blue-500",
+      image: clearwaterSunsetImage
     },
     {
       title: "Gaming & Arcades",
