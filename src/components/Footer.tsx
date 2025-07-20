@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-heading font-bold text-gradient">
-              Fun and The City - Guide 
+              Fun and The City 
             </h3>
             <p className="text-warm-gray leading-relaxed">
               Discovering Tampa Bay's best 18+ experiences, one adventure at a time. 
@@ -65,7 +65,7 @@ const Footer = () => {
 
         <div className="border-t border-warm-gray/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-warm-gray text-sm mb-4 md:mb-0">
-            © 2024 Fun and The City. All rights reserved.
+            © 2025 Fun and The City. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
        
